@@ -1,9 +1,7 @@
 <template>
   <div class="app">
-    <!-- Composant pour afficher l'iPhone en 3D -->
-    <IphoneDisplay ref="iphoneDisplay" />
 
-    <!-- Barre de sélection des couleurs -->
+    <IphoneDisplay ref="iphoneDisplay" />
     <div class="color-picker">
       <button
           v-for="color in colors"
@@ -23,7 +21,7 @@ export default {
   components: { IphoneDisplay }, // Inclusion du composant iPhone 3D
   data() {
     return {
-      colors: ['#ffffff', '#181e27', '#ff0000', '#bbe4e6', '#899ee6'], // Liste des couleurs disponibles
+      colors: ['#ffffff', '#181e27', '#ff0000', '#bbe4e6', '#899ee6'],
     };
   },
   methods: {
@@ -36,7 +34,7 @@ export default {
 </script>
 
 <style>
-/* Conteneur des pastilles de couleur */
+/* Conteneur pastilles couleur */
 .color-picker {
   position: absolute;
   bottom: 20px;
@@ -46,14 +44,14 @@ export default {
   gap: 10px;
 }
 
-/* Style des boutons (pastilles) de couleur */
+/* Style pastille  couleur */
 .color-picker button {
   width: 40px;
   height: 40px;
   border: none;
-  border-radius: 50%; /* Forme ronde */
+  border-radius: 50%;
   cursor: pointer;
   border: 1px solid whitesmoke;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 </style>

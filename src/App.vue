@@ -10,6 +10,7 @@
       @click="changeColor(color)"
       ></button>
     </div>
+
   </div>
 </template>
 
@@ -35,6 +36,9 @@ export default {
 
 <style>
 /* Conteneur pastilles couleur */
+*{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 .color-picker {
   position: absolute;
   bottom: 20px;

@@ -125,7 +125,7 @@ export default {
 </script>
 
 <style scoped>
-/* Conteneur principal */
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -133,14 +133,14 @@ export default {
   justify-content: flex-start;
   width: 100%;
   height: 100vh;
-  background: #f9f9f9; /* Fond blanc propre */
+  background: #f9f9f9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: #333;
   text-align: center;
   position: relative;
 }
 
-/* En-tête */
+
 .header {
   margin-bottom: 20px;
 }
@@ -179,7 +179,7 @@ export default {
   border: 2px solid #aaa;
 }
 
-/* Instructions */
+
 .instructions {
   position: absolute;
   bottom: 30%;

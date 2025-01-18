@@ -63,7 +63,7 @@ export default {
       scene.add(ambientLight);
 
       const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
-      directionalLight.position.set(5, 10, 5);
+      directionalLight.position.set(7, 5, 15);
       scene.add(directionalLight);
 
       // Chargement du modèle 3D
@@ -72,8 +72,8 @@ export default {
           '/models/iphone_16_plus.glb',
           (gltf) => {
             const model = gltf.scene;
-            model.scale.set(1.5, 1.5, 1.5); // Agrandissement du modèle
-            model.position.set(0, -1.5, 0); // Centré au milieu de la scène
+            model.scale.set(1, 1, 1); // Agrandissement du modèle
+            model.position.set(0, -0.3, 0); // Centré au milieu de la scène
             scene.add(model);
             this.model = model;
 

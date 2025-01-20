@@ -26,7 +26,6 @@ export default {
     };
   },
   methods: {
-    // Méthode pour transmettre la couleur choisie au composant enfant
     changeColor(color) {
       this.$refs.iphoneDisplay.setColor(color); // Appelle la méthode setColor dans IphoneDisplay
     },
@@ -35,7 +34,7 @@ export default {
 </script>
 
 <style>
-/* Conteneur pastilles couleur */
+
 *{
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -48,7 +47,7 @@ export default {
   gap: 10px;
 }
 
-/* Style pastille  couleur */
+
 .color-picker button {
   width: 40px;
   height: 40px;

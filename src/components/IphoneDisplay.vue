@@ -1,6 +1,5 @@
 <template>
   <div class="app-container">
-    <!-- Section de présentation -->
     <div class="header">
       <h1>L'iPhone 16</h1>
       <p>Titane, Graphite, Argent, Or, Bleu. Plus fort que jamais ! </p>
@@ -8,10 +7,8 @@
     </div>
 
 
-    <!-- Le conteneur pour la scène 3D -->
     <div ref="sceneContainer"></div>
 
-    <!-- Animation d'instructions -->
     <div v-if="showInstructions" class="instructions">
       🖱️ Faites glisser pour tourner
     </div>
@@ -28,8 +25,8 @@ export default {
   data() {
     return {
       colors: ['#000000', '#ffffff', '#ff0000', '#00ff00', '#0000ff'], // Palette de couleurs
-      model: null, // Référence au modèle 3D
-      showInstructions: true, // Variable pour afficher ou cacher les instructions
+      model: null,
+      showInstructions: true,
     };
   },
   mounted() {
@@ -39,11 +36,11 @@ export default {
     initScene() {
       const container = this.$refs.sceneContainer;
 
-      // Création de la scène
+
       const scene = new THREE.Scene();
       scene.background = new THREE.Color(0xf9f9f9); // Fond blanc
 
-      // Création de la caméra
+
       const camera = new THREE.PerspectiveCamera(
           75,
           window.innerWidth / window.innerHeight,
@@ -66,18 +63,17 @@ export default {
       directionalLight.position.set(7, 5, 15);
       scene.add(directionalLight);
 
-      // Chargement du modèle 3D
+      // Chargement modèle
       const loader = new GLTFLoader();
       loader.load(
           '/models/iphone_16_plus.glb',
           (gltf) => {
             const model = gltf.scene;
-            model.scale.set(1, 1, 1); // Agrandissement du modèle
+            model.scale.set(1, 1, 1); // Agrandissement modèle
             model.position.set(0, -0.3, 0); // Centré au milieu de la scène
             scene.add(model);
             this.model = model;
 
-            // Cacher les instructions après 5 secondes
             setTimeout(() => {
               this.showInstructions = false;
             }, 5000);

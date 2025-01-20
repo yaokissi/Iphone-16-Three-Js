@@ -24,7 +24,7 @@ export default {
   name: "IphoneDisplay",
   data() {
     return {
-      colors: ['#000000', '#ffffff', '#ff0000', '#00ff00', '#0000ff'], // Palette de couleurs
+      colors: ['#000000', '#ffffff', '#ff0000', '#00ff00', '#0000ff'],
       model: null,
       showInstructions: true,
     };
@@ -38,7 +38,7 @@ export default {
 
 
       const scene = new THREE.Scene();
-      scene.background = new THREE.Color(0xf9f9f9); // Fond blanc
+      scene.background = new THREE.Color(0xf9f9f9);
 
 
       const camera = new THREE.PerspectiveCamera(
@@ -47,7 +47,7 @@ export default {
           0.1,
           1000
       );
-      camera.position.set(8, 6, 12); // Caméra plus éloignée pour voir le modèle agrandi
+      camera.position.set(8, 6, 12);
       camera.lookAt(0, 0, 0);
 
       // Rendu
@@ -70,7 +70,7 @@ export default {
           (gltf) => {
             const model = gltf.scene;
             model.scale.set(1, 1, 1); // Agrandissement modèle
-            model.position.set(0, -0.3, 0); // Centré au milieu de la scène
+            model.position.set(0, -0.3, 0);
             scene.add(model);
             this.model = model;
 
@@ -111,7 +111,7 @@ export default {
       if (this.model) {
         this.model.traverse((child) => {
           if (child.isMesh) {
-            child.material.color.set(color); // Change la couleur
+            child.material.color.set(color);
           }
         });
       }

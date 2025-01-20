@@ -19,7 +19,7 @@ import IphoneDisplay from '../src/components/IphoneDisplay.vue';
 
 export default {
   name: 'App',
-  components: { IphoneDisplay }, // Inclusion du composant iPhone 3D
+  components: { IphoneDisplay },
   data() {
     return {
       colors: ['#ffffff', '#181e27', '#ff0000', '#bbe4e6', '#899ee6'],
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     changeColor(color) {
-      this.$refs.iphoneDisplay.setColor(color); // Appelle la méthode setColor dans IphoneDisplay
+      this.$refs.iphoneDisplay.setColor(color);
     },
   },
 };
